@@ -1,0 +1,15 @@
+media_player.vardagsrum_tv:
+  config_entry_id: bf7c97951a41470e8bb021aa412724b5
+  name:
+  platform: cast
+  unique_id: 1b4f9ff5-b397-dc3f-83f9-e21964a593a0
+sensor.emmas_iphone_battery_level:
+  config_entry_id:
+  name:
+  platform: ios
+  unique_id: level_emmas_iphone
+sensor.emmas_iphone_battery_state:
+  config_entry_id:
+  name:
+  platform: ios
+  unique_id: state_emmas_iphone

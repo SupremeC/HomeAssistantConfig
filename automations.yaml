@@ -1,0 +1,36 @@
+# Turns on staircase lights at morning and OFF after breakfast
+- alias: 'Staircase light ON @ morning'
+  hide_entity: True
+  trigger:
+    - platform: time
+      at: '06:00:00'
+  action:
+    # With a single service call, we don't need a '-' before service - though you can if you want to
+    - service: light.turn_on
+      data:
+        entity_id: light.trappbelysning, light.nischbelysning
+        brightness_pct: 15
+        transition: 3
+    - delay: '03:00:00'
+    - service: light.turn_off
+      data:
+        entity_id: light.trappbelysning, light.nischbelysning
+
+
+# Turns on staircase lights at afternoon and OFF at midnight
+- alias: 'Staircase light ON @ afternoon'
+  hide_entity: True
+  trigger:
+    - platform: time
+      at: '16:00:00'
+  action:
+    # With a single service call, we don't need a '-' before service - though you can if you want to
+    - service: light.turn_on
+      data:
+        entity_id: light.trappbelysning, light.nischbelysning
+        brightness_pct: 15
+        transition: 3
+    - delay: '06:00:00'
+    - service: light.turn_off
+      data:
+        entity_id: light.trappbelysning, light.nischbelysning

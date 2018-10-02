@@ -1,0 +1,6 @@
+    binary_sensor.altandorr:
+      device_class: door
+    binary_sensor.entredorr:
+      device_class: door
+    binary_sensor.trappfonster:
+      device_class: window

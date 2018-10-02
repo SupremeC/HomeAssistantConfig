@@ -1,0 +1,75 @@
+  2ndfloor:
+    name: "Övervåning"
+    view: yes
+    entities:
+      - group.upperstairs
+      - group.masterbedroom
+      - group.bedroomLeft
+      - group.bedroomRight
+  1stfloor:
+    name: "Entreplan"
+    view: yes
+    entities:
+      - group.allrum
+      - group.hall
+      - group.guestroom
+  basement:
+    name: "Källare"
+    view: yes
+    entities:
+      - group.gbasement
+  garden:
+    name: "Trädgård"
+    view: yes
+    entities:
+  Garage:
+    name: "Garage"
+    view: yes
+    entities:
+      - switch.motorvamare
+
+
+  gbasement:
+    name: "Källare"
+    entities:
+      - sensor.eliq_online
+      - sensor.kallare_humidity
+      - sensor.kallare_temperature
+      - media_player.vardagsrum_tv
+  allrum:
+    name: "Vardagsrum"
+    entities:
+      - sensor.allrum_humidity
+      - sensor.allrum_temperature
+      - binary_sensor.altandorr
+  hall:
+    name: "Hall"
+    entities:
+      - alarm_control_panel.alvkvarnsvagen_alarm
+      - sensor.hall_temperature
+      - sensor.hall_temperature_2
+      - binary_sensor.entredorr
+      - binary_sensor.trappfonster
+  guestroom:
+    name: "Gästrum"
+    entities:
+  upperstairs:
+    name: "Övre trappa"
+    entities:
+      - light.nischbelysning
+      - light.trappbelysning
+  masterbedroom:
+    name: "Huvudsovrum"
+    entities:
+      - sensor.huvudsovrum_temperature
+      - sensor.huvudsovrum_humidity
+  bedroomLeft:
+    name: "Axels sovrum"
+    entities:
+      - sensor.barnrum_vanster_temperature
+      - sensor.barnrum_vanster_humidity
+  bedroomRight:
+    name: "Amandas sovrum"
+    entities:
+      - sensor.barnrum_h_temperature
+      - sensor.barnrum_h_humidity
